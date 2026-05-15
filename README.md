@@ -2,44 +2,60 @@
 
 Este repositório hospeda a política de privacidade do Tyta em `https://otavioferreiraoliveira-coder.github.io/tyta-privacy/`
 
-## Estrutura
+## 📋 Estrutura
 
 ```
 ├── tyta-privacy/
-│   └── index.html (Política de privacidade em português)
+│   └── index.html (Política de privacidade em português - v1.0 + v2.0)
 └── README.md
 ```
 
-## Como fazer upload para GitHub
+## 🚀 Estratégia de Lançamento
 
-### 1. Criar repositório no GitHub
+| App | Versão | Status | Certificado |
+|-----|--------|--------|-------------|
+| Tyta 1.0 | v1.0 | Production | 4a132037 |
+| Tyta 4.0 | v2.0 | Closed Testing → Production | 4a132037 (MESMO) |
 
-1. Vá para https://github.com/new
-2. Nome: `otavioferreiraoliveira-coder.github.io`
-3. Descrição: "Tyta Privacy Policy and Resources"
-4. Marque: "Public"
-5. Clique: "Create repository"
+**Tyta 4.0 é um UPGRADE do Tyta 1.0** com:
+- ✅ Mesmo packageName (`com.tyta.app`)
+- ✅ Mesmo certificado (keystore)
+- ✅ versionCode em ordem crescente (1 → 2)
+- ✅ Atualização in-place automática na Play Store
 
-### 2. Fazer push do repositório local
+## 📝 Política de Privacidade
 
-```powershell
-cd "C:\Temp\github-pages\otavioferreiraoliveira-coder.github.io"
+A política hospedada cobre **ambas as versões**:
+- Tyta 1.0 (v1.0): Calculador básico
+- Tyta 4.0 (v2.0): Upgrade com AccessibilityService, OCR, gravação de vídeo
 
-# Adicionar remote
-git remote add origin https://github.com/otavioferreiraoliveira-coder/otavioferreiraoliveira-coder.github.io.git
+**URL única para ambas**: `https://otavioferreiraoliveira-coder.github.io/tyta-privacy/`
 
-# Fazer push
-git push -u origin main
+Última atualização: 15 de maio de 2026
+
+## 🔐 Keystore & Certificado
+
+```
+Arquivo: upload-keystore.jks
+Localização: D:\Cofre\Tyta 1.0\keystore\
+Alias: tyta-key
+Certificado SHA1: 4a132037
+Validade: 25 anos (até 2051)
+Senha: Tyta1.0@2026#SecureKey-Prod99
+
+IMPORTANTE: Tyta 1.0 e Tyta 4.0 usam o MESMO keystore
 ```
 
-### 3. Verificar publicação
+## 📦 APKs Release
 
-Aguarde 2-5 minutos e acesse:
-```
-https://otavioferreiraoliveira-coder.github.io/tyta-privacy/
-```
+| App | Versão | Tamanho | Status |
+|-----|--------|---------|--------|
+| Tyta 1.0 | v1.0 | 1.64 MB | ✅ Release compilado |
+| Tyta 4.0 | v2.0 | 44.35 MB | ✅ Release compilado |
 
-## Atualizar política no futuro
+Ambos assinados com o mesmo certificado (4a132037).
+
+## 🔄 Atualizar Política no Futuro
 
 ```powershell
 # 1. Editar arquivo
@@ -52,10 +68,21 @@ git commit -m "chore: Update Tyta privacy policy"
 git push
 ```
 
-## Usar em Google Play Console
+## 📱 Google Play Console
 
-**URL para Play Console**: `https://otavioferreiraoliveira-coder.github.io/tyta-privacy/`
+**URL para ambas as versões**:
+```
+https://otavioferreiraoliveira-coder.github.io/tyta-privacy/
+```
 
-Adicione esta URL em:
-- Tyta 1.0 > App Content > Privacy Policy URL
-- Tyta 4.0 > App Content > Privacy Policy URL
+Configure em:
+- **Tyta 1.0** (v1.0) > App Content > Privacy Policy URL: `https://otavioferreiraoliveira-coder.github.io/tyta-privacy/`
+- **Tyta 4.0** (v2.0) > App Content > Privacy Policy URL: `https://otavioferreiraoliveira-coder.github.io/tyta-privacy/`
+
+## 📂 Backups
+
+- **Local**: `D:\Backups\Tyta-APKs-Release-*.zip`
+- **USB**: `E:\Backups\` (quando conectado)
+- **Cloud**: Bitwarden / 1Password (senhas + metadados)
+
+Veja `D:\Cofre\KEYSTORE_BACKUP_METADATA.txt` para detalhes completos.
